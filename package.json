@@ -18,6 +18,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "dependencies": {
     "express": "^4.17.1",
+    "node-sass": "^6.0.1",
     "socket.io": "^4.1.3"
   }
 }
