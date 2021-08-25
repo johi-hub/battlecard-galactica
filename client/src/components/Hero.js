@@ -116,7 +116,8 @@ const Hero = () => {
                         transition={{ duration: 1 }}
                     >Journey to the unknown</motion.p>
                     <Button
-                    whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{scale: 0.95, backgroundColor: '#67f6e7'}}
                     >Get Started</Button>
                 </ColumnLeft>
                 <ColumnRight>
