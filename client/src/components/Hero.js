@@ -129,7 +129,7 @@ const Hero = () => {
                         Get Started</Button>
                 </ColumnLeft>
                 <ColumnRight>
-                    <Image src={BattleshipOne} alt='battleship' whiteTap={{scale: 0.9}} />
+                    <Image src={BattleshipOne} alt='battleship' whileTap={{scale: 0.9}} />
                     <Image src={BattleshipTwo} alt='battleship' />
                     <Image src={BattleshipThree} alt='battleship' />
                     <Image src={BattleshipFour} alt='battleship'/>
