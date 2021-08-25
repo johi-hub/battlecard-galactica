@@ -98,7 +98,12 @@ const Hero = () => {
         <Section>
             <Container>
                 <ColumnLeft>
-                    <h1>Welcome to Space</h1>
+                    <motion.h1
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1}}
+                        transition={{ duration: 1 }}
+                        >
+                        Welcome to Space</motion.h1>
                     <p>Journey to the unknown</p>
                     <Button>Get Started</Button>
                 </ColumnLeft>
