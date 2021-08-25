@@ -94,6 +94,10 @@ ${Image}:nth-child(4) {
 `;
 
 const Hero = () => {
+    const fadeLeft = {
+        hidden: { opacity: 0, x: -100 },
+        visible: {opacity: 1, x: 0}
+    }
     return (
         <Section>
             <Container>
@@ -104,7 +108,12 @@ const Hero = () => {
                         transition={{ duration: 1 }}
                         >
                         Welcome to Space</motion.h1>
-                    <p>Journey to the unknown</p>
+                    <motion.p
+                        variants={fadeLeft}
+                        initial='hidden'
+                        animate='visible'
+                        transition={{ duration: 1 }}
+                    >Journey to the unknown</motion.p>
                     <Button>Get Started</Button>
                 </ColumnLeft>
                 <ColumnRight>
