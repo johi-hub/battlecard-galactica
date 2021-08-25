@@ -1,6 +1,10 @@
 import React from 'react'
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import BattleshipOne from '../images/battleship-1.png';
+import BattleshipTwo from '../images/battleship-2.png';
+import BattleshipThree from '../images/battleship-3.png';
+import BattleshipFour from '../images/battleship-4.png';
 
 const Section = styled.section`
 height: 100vh;
@@ -51,7 +55,43 @@ cursor: pointer;
 background: transparent;
 `;
 
-const ColumnRight = styled.div``;
+const Image = styled.img`
+position: absolute;
+width: 100%;
+height: 100%;
+max-width: 250px;
+max-height: 250px;
+
+`;
+
+const ColumnRight = styled.div`
+display: flex;
+justify content: center;
+align-items: center;
+padding: 2rem;
+position: relative;
+
+${Image}:nth-child(1) {
+    top: 10px;
+    left: 10px;
+}
+
+${Image}:nth-child(2) {
+    top: 170px;
+    right: 10px;
+}
+
+${Image}:nth-child(3) {
+    top: 350px;
+    left: 50px;
+}
+
+${Image}:nth-child(4) {
+    bottom: 100px;
+    right: 75px;
+}
+
+`;
 
 const Hero = () => {
     return (
@@ -63,7 +103,10 @@ const Hero = () => {
                     <Button>Get Started</Button>
                 </ColumnLeft>
                 <ColumnRight>
-                filler
+                    <Image src={BattleshipOne} alt='battleship' />
+                    <Image src={BattleshipTwo} alt='battleship' />
+                    <Image src={BattleshipThree} alt='battleship' />
+                     <Image src={BattleshipFour} alt='battleship'/>
                 </ColumnRight>
             </Container>
             
