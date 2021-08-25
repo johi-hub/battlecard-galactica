@@ -112,17 +112,19 @@ const Hero = () => {
                 <ColumnLeft>
                     <motion.h1
                         initial={{ opacity: 0 }}
-                        animate={{ opacity: 1}}
+                        animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                         >
-                        Welcome to Battlecard Galactica</motion.h1>
+                        Welcome to Battlecard Galactica
+                    </motion.h1>
                     <motion.p
                         variants={fadeLeft}
                         initial='hidden'
                         animate='visible'
                         transition={{ duration: 1 }}
                         >
-                        A spoiler-safe fan site</motion.p>
+                        A spoiler-safe fan site
+                    </motion.p>
                     <Button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{
@@ -134,7 +136,8 @@ const Hero = () => {
                         initial={{ opacity: 0 }}
                         animate={{opacity: 1, transition: {duration: 1.5} }}
                         >
-                        So Say We All</Button>
+                        So Say We All
+                    </Button>
                 </ColumnLeft>
                 <ColumnRight>
                     <Image
