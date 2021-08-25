@@ -45,7 +45,7 @@ p {
 }
 
 `;
-const Button = styled.div`
+const Button = styled(motion.button)`
 padding: 1rem 3rem;
 font-size: 1rem;
 border: 2px solid #fff;
@@ -53,6 +53,7 @@ border-radius: 4px;
 outline: none;
 cursor: pointer;
 background: transparent;
+color: #fff;
 `;
 
 const Image = styled.img`
@@ -114,13 +115,15 @@ const Hero = () => {
                         animate='visible'
                         transition={{ duration: 1 }}
                     >Journey to the unknown</motion.p>
-                    <Button>Get Started</Button>
+                    <Button
+                    whileHover={{ scale: 1.05 }}
+                    >Get Started</Button>
                 </ColumnLeft>
                 <ColumnRight>
                     <Image src={BattleshipOne} alt='battleship' />
                     <Image src={BattleshipTwo} alt='battleship' />
                     <Image src={BattleshipThree} alt='battleship' />
-                     <Image src={BattleshipFour} alt='battleship'/>
+                    <Image src={BattleshipFour} alt='battleship'/>
                 </ColumnRight>
             </Container>
             
