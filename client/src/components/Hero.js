@@ -124,14 +124,14 @@ const Hero = () => {
                             color: '#000'
                         }}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1, transition: {duration: 1.5}}}
+                        animate={{opacity: 1, transition: {duration: 1.5} }}
                     >
                         Get Started</Button>
                 </ColumnLeft>
                 <ColumnRight>
                     <Image src={BattleshipOne} alt='battleship' whileTap={{ scale: 0.9 }}
                     drag={true}
-                    
+                    dragConstraints={{left: 0, right: 250, top: 0, bottom: 50}}
                     />
                     <Image src={BattleshipTwo} alt='battleship' />
                     <Image src={BattleshipThree} alt='battleship' />
