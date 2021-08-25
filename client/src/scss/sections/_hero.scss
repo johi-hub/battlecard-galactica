@@ -1,0 +1,7 @@
+@use '../custom' as *;
+
+img {
+	@include media-breakpoint-down(sm) {
+		display: none;
+	}
+}

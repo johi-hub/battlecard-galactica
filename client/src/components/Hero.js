@@ -5,6 +5,7 @@ import BattleshipOne from '../images/battleship-1.png';
 import BattleshipTwo from '../images/battleship-2.png';
 import BattleshipThree from '../images/battleship-3.png';
 import BattleshipFour from '../images/battleship-4.png';
+import '../scss/sections/_hero.scss';
 
 const Section = styled.section`
 height: 100vh;
@@ -21,8 +22,9 @@ height: 100vh;
 padding: 3rem calc((100vw - 1300px) /2);
 
 @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
 }
+
 `;
 
 const ColumnLeft = styled.div`
@@ -31,20 +33,27 @@ color: #fff;
 flex-direction: column;
 justify-content: center;
 align-items: flex-start;
-padding: 5rem 2rem;
+padding: 0 2rem;
 
 h1 {
     margin-bottom: 0.5rem;
     font-size: 2rem;
+    
 }
 
 p {
     margin: 2rem 0;
     font-size: 4rem;
     line-height: 1.1;
-}
 
+    @media screen and (max-width: 768px) {
+    font-size: 2rem;
+    width: 60vw;
+}
+    
+}
 `;
+
 const Button = styled(motion.button)`
 padding: 1rem 3rem;
 font-size: 1rem;
@@ -106,14 +115,14 @@ const Hero = () => {
                         animate={{ opacity: 1}}
                         transition={{ duration: 1 }}
                         >
-                        Welcome to Space</motion.h1>
+                        Welcome to Battlecard Galactica</motion.h1>
                     <motion.p
                         variants={fadeLeft}
                         initial='hidden'
                         animate='visible'
                         transition={{ duration: 1 }}
                         >
-                        Journey to the unknown</motion.p>
+                        A spoiler-safe fan site</motion.p>
                     <Button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{
@@ -125,7 +134,7 @@ const Hero = () => {
                         initial={{ opacity: 0 }}
                         animate={{opacity: 1, transition: {duration: 1.5} }}
                         >
-                        Get Started</Button>
+                        So Say We All</Button>
                 </ColumnLeft>
                 <ColumnRight>
                     <Image
