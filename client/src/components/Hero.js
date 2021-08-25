@@ -131,9 +131,17 @@ const Hero = () => {
                 <ColumnRight>
                     <Image src={BattleshipOne} alt='battleship' whileTap={{ scale: 0.9 }}
                     drag={true}
-                    dragConstraints={{left: 0, right: 250, top: 0, bottom: 50}}
+                        dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
+                        initial={{ opacity: 0, y: -100 }}
+                        animate={{opacity: 1, y: 0, transition: {duration: 1}}}
                     />
-                    <Image src={BattleshipTwo} alt='battleship' />
+                    <Image src={BattleshipTwo} alt='battleship'
+                    whileTap={{ scale: 0.6 }}
+                    drag={true}
+                        dragConstraints={{ left: 50, right: 0, top: 0, bottom: 50 }}
+                        initial={{ opacity: 0, x: 100 }}
+                        animate={{opacity: 1, x: 0, transition: {duration: 1}}}
+                    />
                     <Image src={BattleshipThree} alt='battleship' />
                     <Image src={BattleshipFour} alt='battleship'/>
                 </ColumnRight>
