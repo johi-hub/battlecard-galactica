@@ -114,7 +114,7 @@ const Hero = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
-                        >
+                    >
                         Welcome to Battlecard Galactica
                     </motion.h1>
                     <motion.p
@@ -122,7 +122,7 @@ const Hero = () => {
                         initial='hidden'
                         animate='visible'
                         transition={{ duration: 1 }}
-                        >
+                    >
                         A spoiler-safe fan site
                     </motion.p>
                     <Button
@@ -134,8 +134,8 @@ const Hero = () => {
                             color: '#000'
                         }}
                         initial={{ opacity: 0 }}
-                        animate={{opacity: 1, transition: {duration: 1.5} }}
-                        >
+                        animate={{ opacity: 1, transition: { duration: 1.5 } }}
+                    >
                         So Say We All
                     </Button>
                 </ColumnLeft>
@@ -147,7 +147,7 @@ const Hero = () => {
                         drag={true}
                         dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
                         initial={{ opacity: 0, y: -100 }}
-                        animate={{opacity: 1, y: 0, transition: {duration: 1}}}
+                        animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     />
                     <Image
                         src={BattleshipTwo}
@@ -156,7 +156,7 @@ const Hero = () => {
                         drag={true}
                         dragConstraints={{ left: 50, right: 0, top: 0, bottom: 50 }}
                         initial={{ opacity: 0, x: 100 }}
-                        animate={{opacity: 1, x: 0, transition: { duration: 1 } }}
+                        animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
                     />
                     <Image
                         src={BattleshipThree}
@@ -165,7 +165,7 @@ const Hero = () => {
                         drag={true}
                         dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
                         initial={{ opacity: 0, x: -100 }}
-                        animate={{opacity: 1, x: 0, transition: { duration: 1 } }}
+                        animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
                     />
                     <Image
                         src={BattleshipFour}
@@ -174,12 +174,12 @@ const Hero = () => {
                         drag={true}
                         dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                         initial={{ opacity: 0, y: 100 }}
-                        animate={{opacity: 1, y: 0, transition: { duration: 1 } }}
+                        animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     />
                 </ColumnRight>
             </Container>
         </Section>
-    )
+    );
 };
 
-export default Hero
+export default Hero;
