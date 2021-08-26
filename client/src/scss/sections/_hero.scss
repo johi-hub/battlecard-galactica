@@ -26,9 +26,6 @@ img {
 // button
 .button {
 	z-index: 1 !important;
-	@include media-breakpoint-down(sm) {
-		display: none;
-	}
 }
 
 body {
