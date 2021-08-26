@@ -1,34 +1,36 @@
 @use '../custom' as *;
 
+//battleship images
 img {
 	@include media-breakpoint-down(sm) {
 		display: none;
 	}
 }
 
+///battlecard galactica title
 .title {
+	z-index: 1 !important;
 	@include media-breakpoint-down(sm) {
 		font-size: 1rem !important;
-		z-index: 1 !important;
 	}
 }
 
+//description
 .description {
+	z-index: 1 !important;
 	@include media-breakpoint-down(sm) {
 		font-size: 2rem !important;
 	}
 }
 
+// button
 .button {
+	z-index: 1 !important;
 	@include media-breakpoint-down(sm) {
 		display: none;
 	}
 }
 
-// #particles-js {
-// 	z-index: -100000;
-// }
-/* ---- reset ---- */
 body {
 	margin: 0;
 	font: normal 75% Arial, Helvetica, sans-serif;
