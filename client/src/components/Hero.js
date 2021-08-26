@@ -149,7 +149,7 @@ const Hero = () => {
                         alt='battleship'
                         whileTap={{ scale: 0.9 }}
                         drag={true}
-                        dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
+                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                         initial={{ opacity: 0, y: -100 }}
                         animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     />
@@ -158,7 +158,7 @@ const Hero = () => {
                         alt='battleship'
                         whileTap={{ scale: 0.6 }}
                         drag={true}
-                        dragConstraints={{ left: 50, right: 0, top: 0, bottom: 50 }}
+                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
                     />
@@ -167,7 +167,7 @@ const Hero = () => {
                         alt='battleship'
                         whileTap={{ scale: 0.8 }}
                         drag={true}
-                        dragConstraints={{ left: 0, right: 250, top: 0, bottom: 50 }}
+                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
                         initial={{ opacity: 0, x: -100 }}
                         animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
                     />

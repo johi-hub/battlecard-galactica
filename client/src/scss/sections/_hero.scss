@@ -2,7 +2,7 @@
 
 //battleship images
 img {
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down(lg) {
 		display: none;
 	}
 }
@@ -37,7 +37,6 @@ body {
 }
 canvas {
 	display: block;
-	vertical-align: bottom;
 } /* ---- particles.js container ---- */
 #particles-js {
 	position: absolute;
@@ -68,7 +67,7 @@ canvas {
 }
 #stats,
 .count-particles {
-	-webkit-user-select: none;
+	user-select: none;
 	margin-top: 5px;
 	margin-left: 5px;
 }
