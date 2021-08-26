@@ -6,13 +6,15 @@ import BattleshipTwo from '../images/battleship-2.png';
 import BattleshipThree from '../images/battleship-3.png';
 import BattleshipFour from '../images/battleship-4.png';
 import '../scss/sections/_hero.scss';
+import Particles from 'react-particles-js';
+
 
 const Section = styled.section`
 height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
-background: #131313
+background: #000;
 `;
 
 const Container = styled.div`
@@ -45,12 +47,6 @@ p {
     margin: 2rem 0;
     font-size: 4rem;
     line-height: 1.1;
-
-    @media screen and (max-width: 768px) {
-    font-size: 2rem;
-    width: 60vw;
-}
-    
 }
 `;
 
@@ -107,10 +103,16 @@ const Hero = () => {
         visible: { opacity: 1, x: 0 }
     }
     return (
-        <Section>
+        <Section >
+      <Particles id="particles-js"
+                params={
+                {"particles":{"number":{"value":178,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"","width":110,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":1126.873126873127,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}
+            }    
+        />
             <Container>
                 <ColumnLeft>
                     <motion.h1
+                        className="title"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
@@ -118,6 +120,7 @@ const Hero = () => {
                         Welcome to Battlecard Galactica
                     </motion.h1>
                     <motion.p
+                        className="description"
                         variants={fadeLeft}
                         initial='hidden'
                         animate='visible'
@@ -126,6 +129,7 @@ const Hero = () => {
                         A spoiler-safe fan site
                     </motion.p>
                     <Button
+                        className='button'
                         whileHover={{ scale: 1.05 }}
                         whileTap={{
                             scale: 0.95,
@@ -177,7 +181,8 @@ const Hero = () => {
                         animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     />
                 </ColumnRight>
-            </Container>
+                </Container>
+                
         </Section>
     );
 };
