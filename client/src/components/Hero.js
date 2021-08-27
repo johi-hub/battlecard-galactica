@@ -40,7 +40,6 @@ padding: 0 2rem;
 h1 {
     margin-bottom: 0.5rem;
     font-size: 2rem;
-    
 }
 
 p {
@@ -55,7 +54,6 @@ padding: 1rem 3rem;
 font-size: 1rem;
 border: 2px solid #fff;
 border-radius: 4px;
-outline: none;
 cursor: pointer;
 background: transparent;
 color: #fff;
@@ -104,7 +102,7 @@ const Hero = () => {
     }
     return (
         <Section >
-        <Particles id="particles-js"
+    <Particles id="particles-js"
                 params={
                 {"particles":{"number":{"value":178,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"","width":110,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":1126.873126873127,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true}
             }    
@@ -117,7 +115,7 @@ const Hero = () => {
                         animate={{ opacity: 1 }}
                         transition={{ duration: 1 }}
                     >
-                        Welcome to Battlecard Galactica
+                        Welcome to <span className="battlecardgalactica">Battlecard Galactica</span>
                     </motion.h1>
                     <motion.p
                         className="description"
@@ -126,15 +124,15 @@ const Hero = () => {
                         animate='visible'
                         transition={{ duration: 1 }}
                     >
-                        A spoiler-safe fan site
+                        A spoiler-safe fan page
                     </motion.p>
                     <Button
                         className='button'
                         whileHover={{ scale: 1.05 }}
                         whileTap={{
                             scale: 0.95,
-                            backgroundColor: '#67f6e7',
-                            border: 'none',
+                            backgroundColor: '#8884FF',
+                            border: 0,
                             color: '#000'
                         }}
                         initial={{ opacity: 0 }}
@@ -149,7 +147,7 @@ const Hero = () => {
                         alt='battleship'
                         whileTap={{ scale: 0.9 }}
                         drag={true}
-                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                        dragConstraints={{ left: -250, right: 250, top: 0, bottom: 50 }}
                         initial={{ opacity: 0, y: -100 }}
                         animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     />
@@ -158,7 +156,7 @@ const Hero = () => {
                         alt='battleship'
                         whileTap={{ scale: 0.6 }}
                         drag={true}
-                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                        dragConstraints={{ left: -350, right: 0, top: -200, bottom: 0 }}
                         initial={{ opacity: 0, x: 100 }}
                         animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
                     />
@@ -167,7 +165,7 @@ const Hero = () => {
                         alt='battleship'
                         whileTap={{ scale: 0.8 }}
                         drag={true}
-                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                        dragConstraints={{ left: -250, right: 250, top: 0, bottom: 0 }}
                         initial={{ opacity: 0, x: -100 }}
                         animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
                     />
@@ -176,7 +174,7 @@ const Hero = () => {
                         alt='battleship'
                         whileTap={{ scale: 0.9 }}
                         drag={true}
-                        dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                        dragConstraints={{ left: -250, right: 50, top: -250, bottom: 0 }}
                         initial={{ opacity: 0, y: 100 }}
                         animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
                     />
