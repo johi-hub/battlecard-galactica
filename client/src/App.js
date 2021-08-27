@@ -7,8 +7,10 @@ function App() {
   return (
     <>
       <Router>
-        <Route path="/welcome" component={ Hero }/>
-        <Route path="/homepage" component={ Homepage }/>
+        <Switch>
+          <Route path="/" exact component={ Hero }/>
+          <Route path="/homepage" component={Homepage} />
+        </Switch>
       </Router>
     </>
   );
