@@ -7,6 +7,7 @@ import BattleshipThree from '../images/battleship-3.png';
 import BattleshipFour from '../images/battleship-4.png';
 import '../scss/sections/_hero.scss';
 import Particles from 'react-particles-js';
+import { Link } from 'react-router-dom'
 
 
 const Section = styled.section`
@@ -126,6 +127,7 @@ const Hero = () => {
                     >
                         A spoiler-safe fan page
                     </motion.p>
+                    <Link to="/homepage">
                     <Button
                         className='button'
                         whileHover={{ scale: 1.05 }}
@@ -139,7 +141,8 @@ const Hero = () => {
                         animate={{ opacity: 1, transition: { duration: 1.5 } }}
                     >
                         So Say We All
-                    </Button>
+                        </Button>
+                        </Link>
                 </ColumnLeft>
                 <ColumnRight>
                     <Image
